@@ -2,9 +2,10 @@
  * @param {number} n
  * @return {string[]}
  */
-var resultArray = [];
+var resultArray;
 
 var generateParenthesis = function(n) {
+    resultArray = [];
     backtrack("", 0, 0, n);
     return resultArray;
 };
