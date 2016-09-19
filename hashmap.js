@@ -8,7 +8,7 @@ function HashMap(){
     * 判断Map是否为空
     */
     this.isEmpty = function(){
-        return length == 0;
+        return length === 0;
     };
 
     /**
