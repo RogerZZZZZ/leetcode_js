@@ -12,6 +12,17 @@ function HashMap(){
     };
 
     /**
+    * 改变某位置的数值
+    */
+    this.changeValue=function(value){
+        for(var key in obj){
+            if(obj[key] == value){
+                obj[key] += value;
+            }
+        }
+    };
+
+    /**
     * 判断对象中是否包含给定Key
     */
     this.containsKey=function(key){
@@ -60,7 +71,7 @@ function HashMap(){
     * 获得Map中的所有Value
     */
     this.values=function(){
-        var _values = new Array();
+        var _values = [];
         for(var key in obj){
             _values.push(obj[key]);
         }
@@ -71,7 +82,7 @@ function HashMap(){
     * 获得Map中的所有Key
     */
     this.keySet=function(){
-        var _keys = new Array();
+        var _keys = [];
         for(var key in obj){
             _keys.push(key);
         }
@@ -90,7 +101,7 @@ function HashMap(){
     */
     this.clear = function(){
         length = 0;
-        obj = new Object();
+        obj = {};
     };
 
     /*
